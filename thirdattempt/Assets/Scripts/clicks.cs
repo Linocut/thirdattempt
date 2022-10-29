@@ -5,20 +5,16 @@ using UnityEngine.UI;
 
 public class clicks : MonoBehaviour
 {
-    public Text idk;
+
     public Button buttondoor; 
     public Button buttonphone;
     public Button buttonbat;
     public Camera camera;
     private bool drawerState = false;
     // Start is called before the first frame update
-    public void door()
-    {
-        idk.gameObject.SetActive(true);
-    }
+
     public void left()
     {
-        idk.gameObject.SetActive(false);
         camera.transform.position = new Vector3(30, 0 ,-10);
     }
     public void drawer()
@@ -38,7 +34,6 @@ public class clicks : MonoBehaviour
     }
     public void right()
     {
-        idk.gameObject.SetActive(false);
         camera.transform.position = new Vector3(120, 0, -10);
     }
     public void down()
@@ -76,9 +71,7 @@ public class clicks : MonoBehaviour
     }
     public void window()
     {
-        idk.text = "You crash out the window. ";
-        idk.transform.position = new Vector2(120, 0);
-        idk.gameObject.SetActive(true);
+        
         if (Input.GetMouseButtonDown(0))
         {
             camera.transform.position = new Vector3(150, 30, -10);
