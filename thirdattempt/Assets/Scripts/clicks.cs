@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class clicks : MonoBehaviour
 {
     public Text idk;
-    public Image background;
-    public Sprite newbackground;
-    public Sprite drawerbackground;
-    public Button buttondoor;
+    public Button buttondoor; 
+    public Button buttonphone;
+    public Camera camera;
+    private bool drawerState = false;
     // Start is called before the first frame update
     public void door()
     {
@@ -18,12 +18,48 @@ public class clicks : MonoBehaviour
     public void left()
     {
         idk.gameObject.SetActive(false);
-        buttondoor.gameObject.SetActive(false);
-        background.sprite = newbackground;
-        
+        camera.transform.position = new Vector3(30, 0 ,-10);
     }
     public void drawer()
     {
-        background.sprite = drawerbackground;
+        if (drawerState == false)
+        {
+            camera.transform.position = new Vector3(60, 0, -10);
+        }
+        else if (drawerState == true)
+        {
+            camera.transform.position = new Vector3(90, 0, -10);
+        }
     }
+    public void right2()
+    {
+        camera.transform.position = new Vector3(0, 0, -10);
+    }
+    public void right()
+    {
+        idk.gameObject.SetActive(false);
+        camera.transform.position = new Vector3(120, 0, -10);
+    }
+    public void down()
+    {
+        camera.transform.position = new Vector3(30, 0, -10);
+    }
+    public void closedrawer()
+    {
+        drawerState = true;
+        camera.transform.position = new Vector3(90, 0, -10);
+    }
+    public void phone()
+    {
+        buttonphone.gameObject.SetActive(false);
+    }
+    public void wardrobe()
+    {
+        camera.transform.position = new Vector3(120, 30, -10);
+    }
+    public void down2()
+    {
+        camera.transform.position = new Vector3(120, 0, -10);
+    }
+
 }
