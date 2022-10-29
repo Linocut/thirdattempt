@@ -8,6 +8,7 @@ public class clicks : MonoBehaviour
     public Text idk;
     public Button buttondoor; 
     public Button buttonphone;
+    public Button buttonbat;
     public Camera camera;
     private bool drawerState = false;
     // Start is called before the first frame update
@@ -61,5 +62,27 @@ public class clicks : MonoBehaviour
     {
         camera.transform.position = new Vector3(120, 0, -10);
     }
-
+    public void bed()
+    {
+        camera.transform.position = new Vector3(150, 0, -10);
+    }
+    public void up()
+    {
+        camera.transform.position = new Vector3(120, 0, -10);
+    }
+    public void bat()
+    {
+        buttonbat.gameObject.SetActive(false);
+    }
+    public void window()
+    {
+        idk.text = "You crash out the window. ";
+        idk.transform.position = new Vector2(120, 0);
+        idk.gameObject.SetActive(true);
+        if (Input.GetMouseButtonDown(0))
+        {
+            camera.transform.position = new Vector3(150, 30, -10);
+        }
+              
+    }
 }
