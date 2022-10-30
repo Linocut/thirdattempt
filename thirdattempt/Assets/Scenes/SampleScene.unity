@@ -1213,6 +1213,7 @@ MonoBehaviour:
   textbg: {fileID: 1389969358}
   bigCanvas: {fileID: 56005344}
   thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
 --- !u!1 &421451317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   musicClipFour: {fileID: 8300000, guid: d5e9f3140ebaf2145a87d6b3cbca3587, type: 3}
   musicClipFive: {fileID: 8300000, guid: fe1cb7cc9c62bee4ba61a77990adebd9, type: 3}
   musicClipSix: {fileID: 8300000, guid: 83a8eddc6dda924478142fe61383b1f4, type: 3}
+  musicClipSeven: {fileID: 0}
   musicSource: {fileID: 437176162}
 --- !u!82 &437176162
 AudioSource:
@@ -2078,8 +2080,9 @@ MonoBehaviour:
   buttonText: {fileID: 740592325}
   descriptionText: {fileID: 2112212031}
   textbg: {fileID: 1389969358}
-  bigCanvas: {fileID: 0}
+  bigCanvas: {fileID: 56005344}
   thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
 --- !u!1 &570686062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2124,7 @@ MonoBehaviour:
   textbg: {fileID: 1389969358}
   bigCanvas: {fileID: 0}
   thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
 --- !u!4 &570686064
 Transform:
   m_ObjectHideFlags: 0
@@ -2250,6 +2254,7 @@ MonoBehaviour:
   musicClipFour: {fileID: 8300000, guid: d5e9f3140ebaf2145a87d6b3cbca3587, type: 3}
   musicClipFive: {fileID: 8300000, guid: fe1cb7cc9c62bee4ba61a77990adebd9, type: 3}
   musicClipSix: {fileID: 0}
+  musicClipSeven: {fileID: 8300000, guid: 2d90bd1ed378d5549924c6de442fcf88, type: 3}
   musicSource: {fileID: 570686065}
 --- !u!1 &592304241
 GameObject:
@@ -2833,6 +2838,7 @@ MonoBehaviour:
   dresser: {fileID: 1830259028}
   description: {fileID: 2112212031}
   camera: {fileID: 519420031}
+  thing: {fileID: 570686062}
 --- !u!1 &833747553
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,8 +3038,9 @@ MonoBehaviour:
   buttonText: {fileID: 740592325}
   descriptionText: {fileID: 2112212031}
   textbg: {fileID: 1389969358}
-  bigCanvas: {fileID: 0}
+  bigCanvas: {fileID: 56005344}
   thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
 --- !u!1 &861907566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,6 +5184,7 @@ GameObject:
   - component: {fileID: 1830259025}
   - component: {fileID: 1830259029}
   - component: {fileID: 1830259028}
+  - component: {fileID: 1830259030}
   m_Layer: 5
   m_Name: wardrobe
   m_TagString: Untagged
@@ -5260,6 +5268,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1830259030}
+        m_TargetAssemblyTypeName: empty, Assembly-CSharp
+        m_MethodName: wardrobe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1830259026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5329,6 +5349,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a54eccb87944a4ca6ebd5e188f6a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1830259030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830259023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c25c76d99304244b73cafbc1796b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narration: {fileID: 9857900}
+  timer: {fileID: 770721203}
+  timerBg: {fileID: 647792864}
+  nothing: {fileID: 305611958}
+  back: {fileID: 386980894}
+  buttonText: {fileID: 740592325}
+  descriptionText: {fileID: 2112212031}
+  textbg: {fileID: 1389969358}
+  bigCanvas: {fileID: 56005344}
+  thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
 --- !u!1 &1860750506
 GameObject:
   m_ObjectHideFlags: 0
@@ -5378,6 +5421,7 @@ MonoBehaviour:
   musicClipFour: {fileID: 8300000, guid: d5e9f3140ebaf2145a87d6b3cbca3587, type: 3}
   musicClipFive: {fileID: 8300000, guid: fe1cb7cc9c62bee4ba61a77990adebd9, type: 3}
   musicClipSix: {fileID: 8300000, guid: 83a8eddc6dda924478142fe61383b1f4, type: 3}
+  musicClipSeven: {fileID: 0}
   musicSource: {fileID: 1860750509}
 --- !u!82 &1860750509
 AudioSource:
@@ -5769,6 +5813,7 @@ MonoBehaviour:
   musicClipFour: {fileID: 8300000, guid: d5e9f3140ebaf2145a87d6b3cbca3587, type: 3}
   musicClipFive: {fileID: 8300000, guid: fe1cb7cc9c62bee4ba61a77990adebd9, type: 3}
   musicClipSix: {fileID: 0}
+  musicClipSeven: {fileID: 0}
   musicSource: {fileID: 1986661054}
 --- !u!82 &1986661054
 AudioSource:
@@ -5928,7 +5973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: -0}
   m_SizeDelta: {x: 1080, y: 810}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996601139
@@ -6136,8 +6181,9 @@ MonoBehaviour:
   buttonText: {fileID: 740592325}
   descriptionText: {fileID: 2112212031}
   textbg: {fileID: 1389969358}
-  bigCanvas: {fileID: 0}
+  bigCanvas: {fileID: 56005344}
   thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
 --- !u!1 &2034853366
 GameObject:
   m_ObjectHideFlags: 0
@@ -6152,6 +6198,8 @@ GameObject:
   - component: {fileID: 2034853368}
   - component: {fileID: 2034853372}
   - component: {fileID: 2034853371}
+  - component: {fileID: 2034853373}
+  - component: {fileID: 2034853374}
   m_Layer: 5
   m_Name: window
   m_TagString: Untagged
@@ -6235,6 +6283,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2034853373}
+        m_TargetAssemblyTypeName: empty, Assembly-CSharp
+        m_MethodName: window
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2034853374}
+        m_TargetAssemblyTypeName: timer, Assembly-CSharp
+        m_MethodName: window
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2034853369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6304,6 +6376,50 @@ MonoBehaviour:
   phoneState: 0
   batState: 0
   dresserState: 0
+--- !u!114 &2034853373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034853366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c25c76d99304244b73cafbc1796b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narration: {fileID: 9857900}
+  timer: {fileID: 770721203}
+  timerBg: {fileID: 647792864}
+  nothing: {fileID: 305611958}
+  back: {fileID: 386980894}
+  buttonText: {fileID: 740592325}
+  descriptionText: {fileID: 2112212031}
+  textbg: {fileID: 1389969358}
+  bigCanvas: {fileID: 56005344}
+  thing: {fileID: 570686062}
+  endCanvas: {fileID: 1274066922}
+--- !u!114 &2034853374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034853366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293723405b1a94944920117142378813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownText: {fileID: 770721203}
+  endCanvas: {fileID: 1274066922}
+  endText: {fileID: 111811540}
+  phone: {fileID: 833747555}
+  bat: {fileID: 565118314}
+  dresser: {fileID: 1830259028}
+  description: {fileID: 2112212031}
+  camera: {fileID: 519420031}
+  thing: {fileID: 570686062}
 --- !u!1 &2112212029
 GameObject:
   m_ObjectHideFlags: 0

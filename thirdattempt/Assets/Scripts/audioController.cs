@@ -10,6 +10,7 @@ public class audioController : MonoBehaviour
     public AudioClip musicClipFour;
     public AudioClip musicClipFive;
     public AudioClip musicClipSix;
+    public AudioClip musicClipSeven;
     public AudioSource musicSource;
 
     // Update is called once per frame
@@ -47,6 +48,11 @@ public class audioController : MonoBehaviour
     {
         musicSource.volume = 0.2f;
         musicSource.clip = musicClipSix;
+        musicSource.Play();
+    }
+    public void glassBreak()
+    {
+        musicSource.clip = musicClipSeven;
         musicSource.Play();
     }
        

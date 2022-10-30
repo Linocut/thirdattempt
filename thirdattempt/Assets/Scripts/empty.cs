@@ -15,22 +15,21 @@ public class empty : MonoBehaviour
     public Image textbg;
     public Canvas bigCanvas;
     public GameObject thing;
-    private bool partOne = false;
+    public Canvas endCanvas;
     // Start is called before the first frame update
     void Start()
     {
-        if (partOne == false)
-        {
-            narration.text = "In the night, you hear a noise.";
-            timer.gameObject.SetActive(false);
-            timerBg.gameObject.SetActive(false);
-            textbg.gameObject.SetActive(false);
-            descriptionText.gameObject.SetActive(false);
-            nothing.gameObject.SetActive(true);
-            back.gameObject.SetActive(true);
-            thing.GetComponent<audioController>().knocking();
-            buttonText.text = "I hear a knock.";
-        }
+
+        endCanvas.gameObject.SetActive(false);
+        narration.text = "In the night, you hear a noise.";
+        timer.gameObject.SetActive(false);
+        timerBg.gameObject.SetActive(false);
+        textbg.gameObject.SetActive(false);
+        descriptionText.gameObject.SetActive(false);
+        nothing.gameObject.SetActive(true);
+        back.gameObject.SetActive(true);
+        thing.GetComponent<audioController>().knocking();
+        buttonText.text = "I hear a knock.";
         
     }
 
@@ -72,6 +71,22 @@ public class empty : MonoBehaviour
         descriptionText.gameObject.SetActive(true);
         textbg.gameObject.SetActive(true);
         descriptionText.text = "My bat, maybe I can defend myself?";
+    }
+    public void wardrobe()
+    {
+        nothing.gameObject.SetActive(false);
+        back.gameObject.SetActive(false);
+        descriptionText.gameObject.SetActive(true);
+        textbg.gameObject.SetActive(true);
+        descriptionText.text = "I could hide here..but probably not for long.";
+    }
+    public void window()
+    {
+        nothing.gameObject.SetActive(false);
+        back.gameObject.SetActive(false);
+        descriptionText.gameObject.SetActive(true);
+        textbg.gameObject.SetActive(true);
+        descriptionText.text = "The window is sealed tight. Maybe I can find something to break it.";
     }
 
 
