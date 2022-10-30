@@ -16,6 +16,7 @@ public class empty : MonoBehaviour
     public Canvas bigCanvas;
     public GameObject thing;
     public Canvas endCanvas;
+    public bool startTimer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class empty : MonoBehaviour
 
     public void knock()
     {
+        startTimer = true;
         thing.GetComponent<audioController>().doorbreak();
         timerBg.gameObject.SetActive(true);
         timer.gameObject.SetActive(true);
