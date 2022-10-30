@@ -13,6 +13,7 @@ public class clicks : MonoBehaviour
     public bool phoneState = false;
     public bool batState = false;
     public bool dresserState = false; 
+
     // Start is called before the first frame update
 
     public void left()
@@ -46,12 +47,10 @@ public class clicks : MonoBehaviour
     }
     public void wardrobe()
     {
-        dresserState = true;
         camera.transform.position = new Vector3(120, 30, -10);
     }
     public void down2()
     {
-        dresserState = false; 
         camera.transform.position = new Vector3(120, 0, -10);
     }
     public void bed()

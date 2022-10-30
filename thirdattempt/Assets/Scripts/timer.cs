@@ -9,10 +9,12 @@ public class timer : MonoBehaviour
     private float startingTime = 30f;
     public Text countdownText;
     public Canvas endCanvas;
+    public Text endText;
     public clicks phone;
     public clicks bat;
     public clicks dresser;
     public Text description;
+    public Camera camera;
     private bool textOne = true;
     private bool textTwo = true;
     // Start is called before the first frame update
@@ -43,14 +45,15 @@ public class timer : MonoBehaviour
         }
         if (currentTime == 0 && !phone.phoneState && !bat.batState)
         {
-            endCanvas.text = "You weren't able to do something in time."
+            endText.text = "You weren't able to do something in time.\n Game Over.";
             endCanvas.gameObject.SetActive(true);
         }
 
-        if (dresser.dresserState)
+        if (camera.transform.position.y == 30)
         {
             Debug.Log("in the closet");
         }
+
         if (phone.phoneState)
         {
             Debug.Log("phone");
