@@ -7,6 +7,7 @@ public class empty : MonoBehaviour
 {
     public Text narration;
     public Text timer;
+    public Image timerBg;
     public Image nothing;
     public Button back;
     public Text buttonText;
@@ -22,6 +23,7 @@ public class empty : MonoBehaviour
         {
             narration.text = "In the night, you hear a noise.";
             timer.gameObject.SetActive(false);
+            timerBg.gameObject.SetActive(false);
             textbg.gameObject.SetActive(false);
             descriptionText.gameObject.SetActive(false);
             nothing.gameObject.SetActive(true);
@@ -36,6 +38,7 @@ public class empty : MonoBehaviour
     public void knock()
     {
         thing.GetComponent<audioController>().doorbreak();
+        timerBg.gameObject.SetActive(true);
         timer.gameObject.SetActive(true);
         narration.gameObject.SetActive(false);
         nothing.gameObject.SetActive(false);
@@ -51,8 +54,25 @@ public class empty : MonoBehaviour
         descriptionText.gameObject.SetActive(true);
         textbg.gameObject.SetActive(true);
         descriptionText.text = "The bedroom door is open. \nIt must have come in from the front door.";
-        buttonText.text = "Someone must have broken in.";
+
+    }
+    public void phone()
+    {
+        nothing.gameObject.SetActive(false);
+        back.gameObject.SetActive(false);
+        descriptionText.gameObject.SetActive(true);
+        textbg.gameObject.SetActive(true);
+        descriptionText.text = "My phone maybe I can call for help.";
+
+    }
+    public void bat()
+    {
+        nothing.gameObject.SetActive(false);
+        back.gameObject.SetActive(false);
+        descriptionText.gameObject.SetActive(true);
+        textbg.gameObject.SetActive(true);
+        descriptionText.text = "My bat, maybe I can defend myself?";
     }
 
-   
+
 }

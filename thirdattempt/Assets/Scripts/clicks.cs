@@ -10,7 +10,9 @@ public class clicks : MonoBehaviour
     public Button buttonphone;
     public Button buttonbat;
     public Camera camera;
-    private bool drawerState = false;
+    public bool phoneState = false;
+    public bool batState = false;
+    public bool dresserState = false; 
     // Start is called before the first frame update
 
     public void left()
@@ -19,14 +21,7 @@ public class clicks : MonoBehaviour
     }
     public void drawer()
     {
-        if (drawerState == false)
-        {
-            camera.transform.position = new Vector3(60, 0, -10);
-        }
-        else if (drawerState == true)
-        {
-            camera.transform.position = new Vector3(90, 0, -10);
-        }
+        camera.transform.position = new Vector3(60, 0, -10);
     }
     public void right2()
     {
@@ -42,19 +37,21 @@ public class clicks : MonoBehaviour
     }
     public void closedrawer()
     {
-        drawerState = true;
         camera.transform.position = new Vector3(90, 0, -10);
     }
     public void phone()
     {
+        phoneState = true;
         buttonphone.gameObject.SetActive(false);
     }
     public void wardrobe()
     {
+        dresserState = true;
         camera.transform.position = new Vector3(120, 30, -10);
     }
     public void down2()
     {
+        dresserState = false; 
         camera.transform.position = new Vector3(120, 0, -10);
     }
     public void bed()
@@ -67,6 +64,7 @@ public class clicks : MonoBehaviour
     }
     public void bat()
     {
+        batState = true;
         buttonbat.gameObject.SetActive(false);
     }
     public void window()
